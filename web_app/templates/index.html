@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Physics Bot - Học Vật Lý với công nghệ AI{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+                <h1>Khám phá thế giới Vật Lý với AI</h1>
+                <p class="lead mb-4">Get instant answers to your physics questions. Chat with our Physics Bot to understand complex concepts in simple terms.</p>
+                
+                {% if current_user.is_authenticated %}
+                <a href="{{ url_for('chat') }}" class="btn btn-primary btn-lg">Bắt đầu</a>
+                {% else %}
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">Đăng Nhập</a>
+                    <a href="{{ url_for('register') }}" class="btn btn-outline-secondary btn-lg">Đăng Ký</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-5">Tính năng</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon text-primary">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+                        <h3 class="card-title h4">Tương tác cao, gần gũi</h3>
+                        <p class="card-text">Trải nghiệm trò chuyện tự nhiên với trợ lý AI chuyên về Vật Lý. Đặt câu hỏi về bất kỳ chủ đề Vật Lý nào bạn muốn.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon text-primary">
+                            <i class="bi bi-mic"></i>
+                        </div>
+                        <h3 class="card-title h4">Tính chi tiết, chính xác cao</h3>
+                        <p class="card-text">Nhận các giải pháp chi tiết, từng bước cho các vấn đề Vật Lý của bạn. Học cách giải quyết chúng một cách hiệu quả.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon text-primary">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+                        <h3 class="card-title h4">Học tập hiệu quả</h3>
+                        <p class="card-text">Tìm hiểu các khái niệm Vật Lý cơ bản từ Định luật Newton đến Cơ học Lượng tử với các giải thích dễ hiểu và hữu ích.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <h2>Cách Sử Dụng</h2>
+                <ol class="mt-4">
+                    <li class="mb-3">Tạo tài khoản mới hoặc đăng nhập.</li>
+                    <li class="mb-3">Chuyển hướng đến trang trò chuyện để bắt đầu cuộc trò chuyện</li>
+                    <li class="mb-3">Nhập câu hỏi Vật Lý vào ô trò chuyện rồi nhấn Gửi hoặc Enter</li>
+                    <li class="mb-3">Get instant answers to help you understand physics concepts. AI sẽ trả lời câu hỏi cho bạn dưới dạng phản hồi chat, trực quan, dễ hiểu</li>
+                </ol>
+                {% if not current_user.is_authenticated %}
+                <a href="{{ url_for('register') }}" class="btn btn-primary mt-3">Get Started Now</a>
+                {% endif %}
+            </div>
+            <div class="col-lg-6 order-lg-1 mt-4 mt-lg-0">
+                <div class="card p-3">
+                    <div class="card-body">
+                        <h5 class="card-title">1 vài câu hỏi ví dụ</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">"Các định luật chuyển động của Newton là gì?"</li>
+                            <li class="list-group-item">"Giải thích thuyết tương đối của Einstein"</li>
+                            <li class="list-group-item">"Cơ học lượng tử hoạt động như thế nào?"</li>
+                            <li class="list-group-item">"Sự khác biệt giữa động năng và thế năng là gì?"</li>
+                            <li class="list-group-item">"Giải thích khái niệm về trọng lực"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -55,7 +55,7 @@ safety_settings = [
 
 # Khởi tạo model
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",  # Sử dụng tên model chính xác
+    model_name="gemini-2.0-flash",  # Sử dụng tên model chính xác
     generation_config=generation_config,
     safety_settings=safety_settings
 )
@@ -187,19 +187,3 @@ Trả lời:"""
         except Exception as e:
             print(f"Error counting tokens: {e}")
             return 0
-
-
-# Example usage
-if __name__ == "__main__":
-    # Test the class
-    question = "Định luật Newton thứ nhất là gì?"
-    context = "Định luật Newton thứ nhất phát biểu rằng: Một vật sẽ giữ nguyên trạng thái đứng yên hoặc chuyển động thẳng đều nếu không có lực nào tác động lên nó hoặc tổng hợp lực tác động lên nó bằng không."
-    
-    answerer = AnswerQuestionFromDocuments(question, context)
-    
-    # Get token count
-    print(f"Token count: {answerer.get_token_count()}")
-    
-    # Generate answer
-    answer = answerer.run()
-    print(f"Answer: {answer}")

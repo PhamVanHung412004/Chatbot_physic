@@ -149,5 +149,8 @@ system_model_llm_trac_nghiem: |
     Với bài có nhiều cách giải, ưu tiên cách ngắn gọn nhất
     Đối với kết quả gần đúng, chọn phương án gần nhất (< 5% sai lệch)
 
-
-
+system_model_LLM_prompt_check_question: |
+    Phân loại câu hỏi vật lý:
+    - Có A) B) C) D) → MULTIPLE_CHOICE
+    - Có số tính toán → PRACTICE
+    - Hỏi lý thuyết → THEORY

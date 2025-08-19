@@ -1,4 +1,4 @@
-from src import PhysicsMultipleChoiceAgent
+from src import PhysicsMultipleChoieAgent
 import json
 
 def main():

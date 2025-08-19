@@ -10,3 +10,4 @@ path_save_VectorDB: src/Agent_theory/VectorDB_physic_theory
 
 path_dataset_file_json: src/Agent_theory/dataset.json
     
+name_model_LLM_base: Qwen/Qwen3-0.6B

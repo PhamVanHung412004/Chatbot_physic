@@ -88,3 +88,5 @@ config_secret.yaml
 secrets.yaml
 src/Multi_agent/AI_AGENT_TN/
 .env
+Physic/
+dataset_teacher/

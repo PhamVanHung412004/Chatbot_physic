@@ -90,3 +90,5 @@ src/Multi_agent/AI_AGENT_TN/
 .env
 Physic/
 dataset_teacher/
+dataset_test/
+dataset/

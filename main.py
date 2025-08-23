@@ -45,9 +45,10 @@
 # #     print(result_check)   
 # # if __name__ == "__main__":
 # #     main()
-from physics_dataset_converter import quick_convert
+from upload_dataset import Create_VectorDB_Update_Dataset
 
-# Chuyển đổi tất cả file thành CSV chỉ với 1 dòng code
-results = quick_convert("dataset_teacher", "physics_dataset.csv")
-print(f"Đã chuyển đổi {results['total_pairs']} câu hỏi!")
+path_folder = "dataset_test"
+Create_VectorDB_Update_Dataset(path_folder,"dataset/dataset_theory").run
+
+
 

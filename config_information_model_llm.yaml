@@ -1,13 +1,11 @@
 model_embedding: sentence-transformers/all-MiniLM-L6-v2
-
 model_reranking: BAAI/bge-reranker-base
-
 device: cpu
-
 encode_kwargs: encode_kwargs = normalize_embeddings
-
 path_save_VectorDB: src/Agent_theory/VectorDB_physic_theory
-
 path_dataset_file_json: src/Agent_theory/dataset.json
-    
 name_model_LLM_base: Qwen/Qwen3-0.6B
+
+path_save_VectorDB_Theory: dataset_update/VectorDB_Theory
+path_save_VectorDB_Practice: dataset_update/VectorDB_Practice
+path_save_VectorDB_MulltiQA: dataset_update/VectorDB_MulltiQA
